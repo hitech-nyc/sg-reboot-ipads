@@ -10,13 +10,11 @@ Python 3.8 or higher
 
 
 # Set Up Instructions:
-Ensure that the KANDJI_TOKEN environment variable is set with your Kandji API token.
-
 
 ## Install dependencies:
 `pip install requests`
 
-Create a JSON file with iPad data:
+Replace JSON file with iPad data:
 
 File: conferenceroom_ipads.json
 ```
@@ -27,7 +25,7 @@ File: conferenceroom_ipads.json
 ```
 
 ## Set the Kandji API token:
-
+Ensure that the KANDJI_TOKEN environment variable is set with your Kandji API token.
 `export KANDJI_TOKEN="your_kandji_api_token_here"`
 
 # Usage
@@ -35,7 +33,7 @@ File: conferenceroom_ipads.json
 To run the reboot process immediately:
 `python reboot_ipads.py -m once`
 ### Scheduled Daily Reboot:
-To schedule the reboot at 7:00 AM every day:
+To schedule the reboot at X every day (default is 7AM):
 `python reboot_ipads.py -m daily`
 
 
@@ -53,5 +51,5 @@ The script prints log messages to the console, indicating when reboots are initi
 It waits 1 minute after each scheduled reboot to avoid multiple triggers within the same minute.
 ## Troubleshooting
 Ensure the KANDJI_TOKEN is valid and has sufficient permissions.
-Verify the conferenceroom_ipads.json file contains correct device IDs.
+Verify the conferenceroom_ipads.json file contains the correct device IDs.
 Check network connectivity to the Kandji API endpoint.
